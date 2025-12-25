@@ -32,4 +32,4 @@ jobs:
     - name: Set up toolchain
       run: rustup install
     - name: Build crates
-      run: cargo build --crates --verbose
+      run: cargo build --workspace --verbose

@@ -8,6 +8,9 @@
       "installBicep": true
     }
   },
+  "containerEnv": {
+    "TERM": "xterm-256color"
+  },
   "customizations": {
     "vscode": {
       "extensions": [
@@ -16,7 +19,16 @@
         "streetsidesoftware.code-spell-checker",
         "tamasfe.even-better-toml",
         "vadimcn.vscode-lldb"
-      ]
+      ],
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash",
+        "terminal.integrated.profiles.linux": {
+          "bash": {
+            "path": "/bin/bash",
+            "args": []
+          }
+        }
+      }
     }
   },
   "postCreateCommand": "apt-get update && apt-get install -y pkg-config libssl-dev build-essential && rustup install"
